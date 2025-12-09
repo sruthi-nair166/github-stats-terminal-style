@@ -58,20 +58,20 @@ class GithubUser {
         this.gists = align(this.userContent.data.public_gists);
         this.followers = align(this.userContent.data.followers);
         this.createdAt = dateDiffInDays(this.userContent.data.created_at);
-        this.starsCount = 0;
-        this.forkCount = 0;
-        this.repoContent.forEach(repo => {
+        //this.starsCount = 0;
+        //this.forkCount = 0;
+        //this.repoContent.forEach(repo => {
             this.starsCount += repo.stargazers_count
             this.forkCount += repo.forks;
         });
         this.commitsCount = await this.getCommits()
-        this.issueCount = await this.getIssueAndPr('issue')
-        this.prCount = await this.getIssueAndPr('pr')
-        this.stars = align(this.starsCount);
-        this.forks = align(this.forkCount);
+        //this.issueCount = await this.getIssueAndPr('issue')
+        //this.prCount = await this.getIssueAndPr('pr')
+        //this.stars = align(this.starsCount);
+        //this.forks = align(this.forkCount);
         this.commits = align(this.commitsCount);
-        this.issues = align(this.issueCount);
-        this.pr = align(this.prCount);
+        //this.issues = align(this.issueCount);
+        //this.pr = align(this.prCount);
         this.uptime = this.createdAt;
         this.username = align_username(this.userName);
     }
