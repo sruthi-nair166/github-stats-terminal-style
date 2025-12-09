@@ -60,10 +60,10 @@ class GithubUser {
         this.createdAt = dateDiffInDays(this.userContent.data.created_at);
         //this.starsCount = 0;
         //this.forkCount = 0;
-        //this.repoContent.forEach(repo => {
+        /*this.repoContent.forEach(repo => {
             this.starsCount += repo.stargazers_count
             this.forkCount += repo.forks;
-        });
+        });*/
         this.commitsCount = await this.getCommits()
         //this.issueCount = await this.getIssueAndPr('issue')
         //this.prCount = await this.getIssueAndPr('pr')
